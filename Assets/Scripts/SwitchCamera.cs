@@ -6,6 +6,7 @@ public class SwitchCamera : MonoBehaviour
 {
     public Camera hoodCamera;
     public Camera mainCamera;
+    public KeyCode switchKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class SwitchCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(switchKey))
         {
             mainCamera.enabled = !mainCamera.enabled;
             hoodCamera.enabled = !hoodCamera.enabled;
